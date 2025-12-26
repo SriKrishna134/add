@@ -1,0 +1,209 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-color: #161616;
+  cursor: none; /* Hide default cursor for dragon */
+  overflow-x: hidden; /* Prevent horizontal scroll only */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Animated Grid Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #161616;
+  background-image: 
+    linear-gradient(to right, rgba(0, 110, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 110, 255, 0.14) 1px, transparent 1px);
+  background-size: 140px 70px;
+  animation: moveGrid 60s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 140px 70px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #dc2626 0%, #b91c1c 100%);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Page Transitions */
+.page-transition {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global Button Styles */
+button {
+  font-family: inherit;
+  cursor: none;
+  border: none;
+  outline: none;
+}
+
+/* Link Styles */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: none;
+}
+
+/* Selection Styles */
+::selection {
+  background: #ef4444;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 8rem 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  body {
+    cursor: auto; /* Show default cursor on mobile */
+  }
+  
+  a, button, input, textarea, select {
+    cursor: pointer;
+  }
+
+  .section-padding {
+    padding: 4rem 1.5rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}
+
+/* Performance Optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Image Loading */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent FOUC */
+.app:not(.mounted) {
+  visibility: hidden;
+}
+
+.app.mounted {
+  visibility: visible;
+  animation: fadeIn 0.3s ease-in;
+} 

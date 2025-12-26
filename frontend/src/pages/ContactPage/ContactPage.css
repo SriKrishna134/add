@@ -1,0 +1,173 @@
+.contact-section {
+  background: transparent;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+
+
+
+
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 720px;
+  /* margin-bottom: 1rem; */
+  background: linear-gradient(90deg,#10b981,  #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
+  animation: shimmer 3s infinite linear;
+}
+.contact-title:hover {
+  background-position: right center;
+}
+
+.contact-subtext {
+  font-family: 'Formula1 Display', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #d1d5db3d; /* Light gray for professional tone */
+  text-align: start;
+  letter-spacing: 0.9px;
+  line-height: 1.7;
+  background: linear-gradient(90deg, #e0e0e0, #ffffffc1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+/* Contact Card / Form Shared */
+.contact-hover {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+}
+
+.contact-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {                    
+    font-family: 'Formula1 Display', sans-serif;
+  letter-spacing: 1.3px;
+  line-height: 1.7rem; 
+  /* s     */
+
+  background-color: #1e3a8a;
+  color: white;
+  
+  background: linear-gradient(90deg, #10b981, #6366f1);
+
+
+
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  margin-top: 14px;
+}
+
+.contact-form button:hover {
+  background: transparent;
+  color: #6366f1;
+  border: 2px solid #6366f1;
+  /* border: none; */
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+/* Map Styling */
+.contact-map {
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomInMap 1.2s ease forwards;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.form-container {
+  background-color: #4d4f5276;
+  border-radius: 1.35rem;
+  padding: 2rem;
+  width: 350px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUpSlide 1.2s ease forwards;
+  opacity: 0;
+  transform: translateY(50px);
+    /* transition: transform 0.4s ease, box-shadow 0.4s ease; */
+  animation: fadeUpSlide 5s ease-in-out infinite;
+  animation-play-state: running;
+    animation-fill-mode: both; /* important */
+
+}
+.contact-subheading {
+  
+  font-family: 'Formula1 Display', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  max-width: 700px;
+  color: #d1d5db3d; /* Light gray for professional tone */
+  text-align: start;
+  letter-spacing: 0.9px;
+  line-height: 1.7;
+  background: linear-gradient(90deg,#ffffffd6, #dd3bf6, #3b4bf6);
+   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
+    animation: gradientShimmer 6s ease-in-out infinite;
+
+   
+}
+/* Map Zoom-In Animation */
+@keyframes zoomInMap {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

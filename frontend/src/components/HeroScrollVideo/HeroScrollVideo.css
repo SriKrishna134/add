@@ -1,0 +1,57 @@
+.hero-scroll-container {
+  height: 200vh;
+  position: relative;
+  background: #000;
+  width: 100%;
+}
+
+.hero-sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-video-frame {
+  width: 90%;
+  max-width: 1400px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  box-shadow: 
+    0 40px 80px rgba(0, 0, 0, 0.8),
+    0 0 100px rgba(239, 68, 68, 0.1);
+  transition: 
+    transform 0.1s ease-out,
+    opacity 0.1s ease-out,
+    border-radius 0.3s ease-out;
+  will-change: transform, opacity;
+  background: #1a1a1a;
+}
+
+.hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-video-frame {
+    width: 95%;
+  }
+  
+  .hero-scroll-container {
+    height: 150vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-video-frame {
+    width: 98%;
+  }
+}

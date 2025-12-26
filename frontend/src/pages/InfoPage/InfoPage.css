@@ -1,0 +1,172 @@
+.info-section {
+  background-color: transparent;
+  padding: 4rem 2rem;
+  color: #1e293b;
+margin-top: 5px;
+margin-bottom: 24px;
+}
+
+.info-container { 
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+
+.info-title {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 700px;
+  /* margin-bottom: 1rem; */
+  background: linear-gradient(90deg,#10b981,  #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
+  animation: shimmer 3s infinite linear;
+}
+
+/* On hover: reverse gradient direction and add glow */
+.info-title:hover {
+  background-position: right center;
+
+}
+
+.info-description {
+  font-family: 'Formula1 Display', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #d1d5db3d; /* Light gray for professional tone */
+  text-align: start;
+  letter-spacing: 0.9px;
+  line-height: 1.7;
+  background: linear-gradient(90deg, #e0e0e0, #ffffffc1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+.info-steps {
+display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+}
+.info-step {
+  background: #4d4f5276; /* semi-transparent white */                                                                            
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  width: 360px;
+  min-height: 360px;
+  transition: all 0.3s ease;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'SF Pro Display', 'Inter', sans-serif;
+}
+
+
+.info-step:hover {
+  transform: translateY(-14px) rotateX(3deg) rotateY(-3deg) scale(1.05);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.25);
+  /* Shimmer gradient text */
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  /* Animation */
+  background: linear-gradient(90deg, #10b981b5, #3b83f6be, #8a5cf6ba);
+  animation: gradientShimmer 6s ease-in-out infinite;
+}
+
+.info-step h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111827;
+  transition: color 0.3s ease;
+}
+
+.info-step:hover h3 {
+  color: #1e3a8a;
+}
+
+.info-step ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.info-step ul li {
+  font-family: 'Formula1 Display', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #d1d5db3d; /* Light gray for professional tone */
+  text-align: start;
+  letter-spacing: 0.9px;
+  line-height: 1.7;
+  background: linear-gradient(90deg, #e0e0e0, #ffffffc1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+.info-step h3 {
+  
+  font-size: 2rem;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+  background: linear-gradient(90deg,#ffffffd6, #dd3bf6, #3b4bf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
+  animation: shimmer 3s infinite linear;
+  animation: gradientShimmer 6s ease-in-out infinite;
+}
+
+.info-step ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-step ul li {
+    font-size: 1.2rem;
+  margin-bottom: 1.3rem;
+  padding-left: 0.7rem;
+  position: relative;
+  color: #334155;
+}
+/* Keyframes for shimmer */
+@keyframes gradientShimmer {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
